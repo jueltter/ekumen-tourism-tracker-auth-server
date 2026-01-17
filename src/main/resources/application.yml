@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ekumen-tourism-tracker-auth-server
+  profiles:
+    active: dev

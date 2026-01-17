@@ -1,0 +1,2 @@
+INSERT INTO account (username, password, email, enabled, role, profile_picture, logged_user) VALUES ('samagua', HASH('SHA-256','Password1234#'), 'john.doe@example.com', true, 'USER', 'profile_pic.png', 'samagua');
+INSERT INTO account (username, password, email, enabled, role, profile_picture, logged_user) VALUES ('john_doe', HASH('SHA-256','Password1234#'), 'john.doe@example.com', true, 'USER', 'profile_pic.png', 'samagua');

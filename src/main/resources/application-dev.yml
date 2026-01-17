@@ -1,0 +1,44 @@
+server:
+  port: 8082
+spring:
+  threads:
+    virtual:
+      enabled: true
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      indent-output: false
+  datasource:
+    url: jdbc:h2:mem:ekumen-tourism-tracker-auth-server-database;Mode=MySQL
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ekumen-tourism-tracker-auth-server
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        web: DEBUG
+logging:
+  level:
+    tech:
+      samagua:
+        ekumen_tourism_tracker_auth_server: DEBUG
